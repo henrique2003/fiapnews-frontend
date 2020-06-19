@@ -7,6 +7,19 @@ const Form: React.FC = () => {
   const [Title, setTitle] = useState<string>('')
   const [Description, setDescription] = useState<string>('')
 
+  function valdiate (): boolean {
+    const titleArray = Title.split(' ')
+    const descriptionArray = Description.split(' ')
+    if (titleArray.length <= 2 || descriptionArray.length <= 3) {
+      toast.success('Enviado com sucesso', {
+        className: 'toast-success'
+      })
+      return false
+    }
+
+    return true
+  }
+
   const onSubmit = async (e: FormEvent): Promise<void | boolean> => {
     try {
       e.preventDefault()
@@ -15,6 +28,10 @@ const Form: React.FC = () => {
       setDescription(Description.trim())
       if (Title.length === 0 || Description.length === 0) {
         toast.error('Campo em branco')
+        return false
+      }
+
+      if (!valdiate()) {
         return false
       }
 
