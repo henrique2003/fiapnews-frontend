@@ -7,5 +7,6 @@ export const theme = {
   titleColor: 'rgba(255, 255, 255, 0.9)',
   borderForm: 'rgba(255,255,255,0.6)',
   formButtonHover: '#dc0f53',
-  toast: '#FF1260'
+  toast: '#FF1260',
+  backArrow: 'rgba(255, 255, 255, 0.7)'
 }

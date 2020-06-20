@@ -4,6 +4,7 @@ import News from './News'
 import Form from './Form'
 import Subtitle from './Subtitle'
 import Wins from './Wins'
+import NewsPageItem from './NewsPageItem'
 
 export {
   Header,
@@ -11,5 +12,6 @@ export {
   News,
   Form,
   Subtitle,
-  Wins
+  Wins,
+  NewsPageItem
 }
